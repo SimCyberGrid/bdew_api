@@ -10,6 +10,9 @@ readme = "README.md"
 authors = [{ name = "Project SimCyberGrid" , email = "simcybergrid@haw-hamburg.de" }]
 license = "Apache-2.0"
 license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3"]
 keywords = ["energy system", "communication", "api", "bdew", "European energy system"]
 dependencies = [
     "flask>=3.1.2",
