@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bdew-api"
-version = "0.1.0"
+version = "0.1.1"
 description = "BDEW API as part of communication in German energy sytem"
 readme = "README.md"
 authors = [{ name = "Project SimCyberGrid" , email = "simcybergrid@haw-hamburg.de" }]
