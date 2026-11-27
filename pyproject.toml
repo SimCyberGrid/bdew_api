@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bdew-api"
+version = "0.1.0"
+description = "BDEW API as part of communication in German energy sytem"
+readme = "README.md"
+authors = [{ name = "Project SimCyberGrid" , email = "simcybergrid@haw-hamburg.de" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: Apache",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3"
+]
+keywords = ["energy system", "communication", "api", "bdew", "European energy system"]
+dependencies = [
+    "flask>=3.1.2",
+    "pydantic>=2.13.3",
+    "pydantic_core>=2.46.3",
+    "requests>=2.25.1"
+]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+# pytest + cryptography (the tests generate their own brainpool test PKI)
+test = ["pytest>=7", "cryptography>=42"]
+
+[project.urls]
+Homepage = "https://github.com/SimCyberGrid/bdew_api"
+
+[project.scripts]
+bdew_api = "bdew_api.__main__:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# some tests deliberately connect with verify=False (to check they are rejected)
+filterwarnings = ["ignore::urllib3.exceptions.InsecureRequestWarning"]
+
+[tool.flake8]
+max-line-length = 120
+ignore = "E501"
