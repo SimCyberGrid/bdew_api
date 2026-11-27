@@ -4,16 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bdew-api"
-version = "0.1.0"
+version = "0.1.1"
 description = "BDEW API as part of communication in German energy sytem"
 readme = "README.md"
 authors = [{ name = "Project SimCyberGrid" , email = "simcybergrid@haw-hamburg.de" }]
-license = { file = "LICENSE" }
-classifiers = [
-    "License :: OSI Approved :: Apache",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3"
-]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 keywords = ["energy system", "communication", "api", "bdew", "European energy system"]
 dependencies = [
     "flask>=3.1.2",
